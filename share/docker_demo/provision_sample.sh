@@ -16,4 +16,4 @@ export OS_TENANT_NAME='your_tenant_name'
 export OS_PASSWORD='your_password'
 export OS_AUTH_URL='https://identity.tyo1.conoha.io/v2.0'
 
- docker-machine create -d openstack --openstack-flavor-name g-1gb --openstack-image-name vmi-ubuntu-14.04-amd64 --openstack-sec-groups 'default,gncs-ipv4-all' --swarm --swarm-discovery 'token://your_swarm_token' swarm-conoha00
+docker-machine create -d openstack --openstack-flavor-name g-1gb --openstack-image-name vmi-ubuntu-14.04-amd64 --openstack-sec-groups 'default,gncs-ipv4-all' --swarm --swarm-discovery 'token://your_swarm_token' swarm-conoha00
