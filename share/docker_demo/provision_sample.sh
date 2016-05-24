@@ -8,6 +8,7 @@ export AZURE_LOCATION='japanwest'
 
 docker-machine create -d azure --swarm --swarm-master --swarm-discovery 'token://your_swarm_token' --swarm-strategy 'binpack' swarm-manager
 
+docker run -it --rm -v $HOME/.azure:/root/.azure -v $PWD:/data -w /data microsoft/azure-cli:latest azure network nsg rule create -g docker-machine -a swarm-manager-firewall -n nginx -p tcp -u 80-88 -c Allow -y 1000
 
 #Create Swarm Agent Node on OpenStack (Conoha)
 export OS_USERNAME='your_username'
